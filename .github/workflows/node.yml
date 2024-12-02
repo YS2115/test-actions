@@ -36,7 +36,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: node-app
+        name: node-app-${{ matrix.node-version }}  # Node.jsのバージョンを名前に含める
         path: |
           .
           !node_modules
